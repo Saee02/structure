@@ -1,27 +1,31 @@
-# structure
 #include <stdio.h>
-struct name_str
+#include <string.h>
+
+// create struct with person1 variable
+struct name_str 
 {
-	char name[10];
-	int age;
-	int dob;
-	float gpa;
+  char name[50];
+  int prn;
+  float gpa;
+} 
+name_str1;
+
+int main() {
+
+{
+	printf("Enter Name :\n");
+	scanf("%s",&name_str1.name);
+	printf("Enter PRN :\n");
+	scanf("%d",&name_str1.prn);
+	printf("Enter GPA:\n");
+	scanf("%.2f",&name_str1.gpa);
+
 }
 
-int main()
-{
-	printf("\n\t enter name");
-	scanf("%s",&name);
-	printf("\n\t enter age");
-	scanf("%d",&age);
-	printf("\n\t enter date of birth");
-	scanf("%d",&dob);
-	printf("\n\t enter gpa");
-	scanf("%.2f",&gpa);
-	printf("\n\tName:%s",&name);
-	printf("\n\tAge:%d",&age);
-	printf("\n\tD.O.B:%d",&dob);
-	printf("\n\tGPA:%.2f",&gpa);
+  // print struct variables
+  printf("Name: %s\n", name_str1.name);
+  printf("PRN: %d\n", name_str1.prn);
+  printf("GPA: %.2f",name_str1.gpa);
 
-	return 0;
+  return 0;
 }
